@@ -10,7 +10,8 @@ def directors_totals(nds)
   director_i = 0
   while director_i < nds.length do
     director_name = nds[director_i][:name]
-    result[director_name] = gross_for_director(directors_database)
+    result[director_name] = gross_for_director(nds[director_i])
+    director_i += 1
   end
   result
 end
